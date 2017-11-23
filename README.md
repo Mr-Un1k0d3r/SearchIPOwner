@@ -11,7 +11,7 @@ Usage: search.py path [option]
 
 ```
 $ python search.py ips.txt -csv
-ARIN API search owner v1.0
+Search IP Owner v1.0
 Mr.Un1k0d3r RingZer0 Team
 ---------------------------------------------------------
 
