@@ -18,6 +18,13 @@ def query_arin_ip(ip):
 		return None
 	
 	return json.loads(response.read())
+	
+def get_org(data):
+	if data["net"].has_key("orgRef"):
+		return data["net"]["orgRef"]["@name"]
+	if data["net"].has_key("customerRef"):
+		return data["net"]["customerRef"]["@name"]
+	return "null"
 
 if __name__ == "__main__":
 	save_csv = False
@@ -39,7 +46,7 @@ if __name__ == "__main__":
 		try:
 			current = ip.strip()
 			data = query_arin_ip(current)
-			name = data["net"]["orgRef"]["@name"]
+			name = get_org(data)
 			netBlock = data["net"]["netBlocks"]
 			range = "%s/%s" % (netBlock["netBlock"]["startAddress"]["$"], netBlock["netBlock"]["cidrLength"]["$"])
 			print "[+] %s" % current
