@@ -46,11 +46,11 @@ if __name__ == "__main__":
 			print " |_ %s" % name
 			print " \_ %s\n" % range
 			if save_csv:
-				output += "%s,%s,%s" % (current, range, name)
+				output += "%s,%s,%s\n" % (current, range, name)
 		except:
 			print "[+] %s" % current
 			print " |_ No Result\n"
-			output += "%s,null,null" % current
+			output += "%s,null,null\n" % current
 		
 	if save_csv:
 		path = "%s/%s.csv" % (os.getcwd(), time.time())
