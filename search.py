@@ -22,7 +22,7 @@ def query_arin_ip(ip):
 if __name__ == "__main__":
 	save_csv = False
 	output = ""
-	print "ARIN API search owner v%s\nMr.Un1k0d3r RingZer0 Team\n---------------------------------------------------------\n" % VERSION
+	print "Search IP Owner v%s\nMr.Un1k0d3r RingZer0 Team\n---------------------------------------------------------\n" % VERSION
 
 	if len(sys.argv) < 2:
 		print "Usage: %s path [option]\n\n\tPath\tPath to a file that contains bunch of IPs\n\t-csv\tSave to a file in CSV format" % sys.argv[0]
